@@ -4,4 +4,6 @@ let name = "Asish";
 let age = 21;
 let roll = 12;
 console.log(roll);
+console.log(age);
+console.log(name);
 //# sourceMappingURL=typesInTs.js.map
