@@ -63,3 +63,35 @@ const cofee={
 }
 
 const chaiBrew:Brew=cofee
+
+// type composition
+// This is Type Composition in TypeScript, where complex types are built using smaller reusable custom types
+type Item={
+    name:string;
+    quantity:number;
+}
+
+type Address={
+    street:string;
+    pin:number;
+}
+
+type Order={
+    id:string;
+    items:Item[];
+    addresses:Address
+}
+
+
+// Partial<T> is a built-in TypeScript utility type that makes all properties of a type optional.
+type Chai={
+    name:string;
+    price:number;
+    isHot:boolean;
+}
+
+const updateChai=(updates:Partial<Chai>)=>{ // Partial<Chai>--->It converts all properties of Chai into optional properties.
+    console.log("updating chai with:: ",updates);
+}
+
+updateChai({price:30})
