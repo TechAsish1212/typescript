@@ -124,3 +124,9 @@ const enum Color {
 let c = Color.Red;
 
 console.log(c)
+
+
+
+
+
+// complete
