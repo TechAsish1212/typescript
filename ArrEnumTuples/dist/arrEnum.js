@@ -38,4 +38,57 @@ user2 = ["Ajoy", 21]; // correct
 // readonly
 let point = [10, 20];
 // point[0] = 50; // error
+// enum
+// An enum (enumeration) is a way to define a set of named constants.
+var Direction;
+(function (Direction) {
+    Direction[Direction["Up"] = 0] = "Up";
+    Direction[Direction["Down"] = 1] = "Down";
+    Direction[Direction["Left"] = 2] = "Left";
+    Direction[Direction["Right"] = 3] = "Right"; // 3
+})(Direction || (Direction = {}));
+const move = Direction.Right;
+console.log(move); // 3
+// numeric enum
+var status;
+(function (status) {
+    status[status["success"] = 200] = "success";
+    status[status["notFound"] = 404] = "notFound";
+    status[status["serverError"] = 500] = "serverError";
+})(status || (status = {}));
+let res = status.notFound;
+console.log("status: " + res);
+// string enum
+var Role;
+(function (Role) {
+    Role["Admin"] = "ADMIN";
+    Role["User"] = "USER";
+    Role["Guest"] = "GUEST";
+})(Role || (Role = {}));
+let role = Role.Admin;
+console.log(role);
+// function enum
+var Role1;
+(function (Role1) {
+    Role1["Admin"] = "ADMIN";
+    Role1["User"] = "USER";
+})(Role1 || (Role1 = {}));
+function checkAccess(role) {
+    if (role === Role1.Admin) {
+        console.log("Full access");
+    }
+    else {
+        console.log('Use the platform');
+    }
+}
+checkAccess(Role1.User);
+// const enum
+var Color;
+(function (Color) {
+    Color[Color["Red"] = 0] = "Red";
+    Color[Color["Green"] = 1] = "Green";
+    Color[Color["Blue"] = 2] = "Blue";
+})(Color || (Color = {}));
+let c = Color.Red;
+console.log(c);
 //# sourceMappingURL=arrEnum.js.map
