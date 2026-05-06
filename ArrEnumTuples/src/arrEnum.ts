@@ -35,3 +35,31 @@ console.log(table);
 
 
 
+// tuples
+// A tuple is a special type of array where:
+
+// Length is fixed (mostly)
+// Order matters
+// Each position has a specific type
+
+
+let user:[string,number];
+user=["Asish",21];  // correct
+// user=[21,"Asish"] // incorrect order matters.
+
+let userInfo:[name:string,age:number,roll:number,marks:number]=["Asish",21,11930823012,7.3];
+console.log(userInfo);
+
+
+// optional
+let user2: [string, number?];
+user2 = ["Ajoy"];       // correct
+user2 = ["Ajoy", 21];   // correct
+
+// readonly
+let point: readonly [number, number] = [10, 20];
+
+// point[0] = 50; // error
+
+
+

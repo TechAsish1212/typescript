@@ -21,4 +21,21 @@ const table = [
     [7, 8, 9]
 ];
 console.log(table);
+// tuples
+// A tuple is a special type of array where:
+// Length is fixed (mostly)
+// Order matters
+// Each position has a specific type
+let user;
+user = ["Asish", 21]; // correct
+// user=[21,"Asish"] // incorrect order matters.
+let userInfo = ["Asish", 21, 11930823012, 7.3];
+console.log(userInfo);
+// optional
+let user2;
+user2 = ["Ajoy"]; // correct
+user2 = ["Ajoy", 21]; // correct
+// readonly
+let point = [10, 20];
+// point[0] = 50; // error
 //# sourceMappingURL=arrEnum.js.map
