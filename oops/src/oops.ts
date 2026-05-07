@@ -82,3 +82,14 @@ class ModernChai{
 
 const m=new ModernChai();
 m.sugar=4;
+
+
+// static -> static belongs to the class itself, not to the object (instance).
+
+class Person {
+    static country: string = "India";
+
+    constructor(public name:string){}
+  }
+  
+  console.log(Person.country); 
