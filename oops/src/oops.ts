@@ -93,3 +93,31 @@ class Person {
   }
   
   console.log(Person.country); 
+
+//  Abstract -> Define a template without full implementation.
+abstract class Shape {
+    abstract area(): number;
+  }
+  
+  class Circle extends Shape {
+    constructor(private radius: number) {
+      super();
+    }
+  
+    area(): number {
+      return Math.PI * this.radius ** 2;
+    }
+  }
+
+// composition -> One class contains another class instead of inheriting from it.
+class Heater{
+    heat(){}
+}
+
+class ChaiMaker{
+    constructor(private heater:Heater){}
+
+    make(){
+        this.heater.heat
+    }
+}
