@@ -28,7 +28,7 @@ const apply50: DiscountCalculator = (p) => {
     return p * 0.5;
 }
 
-console.log(apply50(100));
+// console.log(apply50(100));
 
 
 interface TeaMachine {
@@ -45,7 +45,7 @@ const machine: TeaMachine = {
     },
 }
 
-machine.start()
+// machine.start()
 
 
 // index signature
@@ -58,7 +58,7 @@ const ratings: ChaiRatings = {
     ginger: 4.5
 }
 
-console.log(ratings);
+// console.log(ratings);
 
 
 interface A {
@@ -71,3 +71,33 @@ interface B {
 interface C extends A, B {
 
 }
+
+
+// Generic
+// Generics in TypeScript allow you to write reusable and type-safe code.
+
+function identity<T>(value: T): T {
+    return value;
+}
+
+console.log(identity<string>("Asish"))
+
+
+
+function pair<A, B>(a: A, b: B): [A, B] {
+    return [a, b];
+}
+
+pair("masala", 20);
+pair("ginger", { flavour: "Ginger" })
+
+// interface generic
+interface Box<T> {
+    content: T
+}
+
+const numberBox: Box<number> = { content: 10 };
+const stringBox: Box<string> = { content: "Apply50" };
+
+console.log(stringBox.content);
+
